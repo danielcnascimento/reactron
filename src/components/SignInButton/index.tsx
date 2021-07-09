@@ -8,9 +8,6 @@ import styles from "./styles.module.scss";
 export function SignInButton() {
 const [ isUserLogged ] = useSession();
 
-console.log(isUserLogged);
-
-
   return isUserLogged ? (
       <button 
       type="button"
