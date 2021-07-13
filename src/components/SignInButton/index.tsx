@@ -25,6 +25,6 @@ const [ isUserLogged ] = useSession();
       >
         <FaGithub color="#eba417" />
         Sign in with GitHub
-      </ button>
+      </ button> 
   );
 }
