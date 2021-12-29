@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^1.22.0",
+    "axios": "^0.24.0",
+    "faunadb": "^4.4.1",
     "next": "11.0.0",
+    "next-auth": "^4.0.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "sass": "^1.35.1",
-    "stripe": "^8.160.0"
+    "stripe": "^8.195.0",
+    "tsconfig.json": "^1.0.10"
   },
   "devDependencies": {
+    "@types/next-auth": "^3.15.0",
     "@types/node": "^15.12.4",
     "@types/react": "^17.0.11",
     "eslint": "7.28.0",

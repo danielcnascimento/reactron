@@ -1,4 +1,4 @@
-import { session, signIn } from "next-auth/client";
+import { useSession, signIn } from "next-auth/react";
 import { api } from "../../services/api";
 import { getStripeJs } from "../../services/stripe-js";
 
@@ -9,6 +9,7 @@ interface SubscribeButtonProps {
 }
 
 export function SubscribeButton({ priceId }: SubscribeButtonProps) {
+  const {data: session} = useSession()
   
   // função que cuida da sessão de pagamento; integrado com backend e frontend;
   const handleSubscribe = async () => {

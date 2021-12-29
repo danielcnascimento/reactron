@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { getSession } from "next-auth/client";
+import { getSession } from "next-auth/react";
 import { fauna } from "../../services/fauna";
 import { stripe } from "../../services/stripe";
 import { query as q } from "faunadb";
@@ -15,7 +15,7 @@ type User = {
 }
 
 //TODO: função que retorna a interface do Stripe, para pagamento mensal.
-export default async (req: NextApiRequest, res: NextApiResponse) => { 
+export default async function handleStripeCheckout (req: NextApiRequest, res: NextApiResponse) { 
   //TODO: verificar que tipo de método foi requisitado.
   if (req.method === "POST") {
     // "customer: Quem está comprando o produto:"
