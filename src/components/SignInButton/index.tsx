@@ -1,4 +1,4 @@
-import { signIn, useSession } from 'next-auth/react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 import { FaGithub } from 'react-icons/fa';
 import { FiX } from 'react-icons/fi';
@@ -14,8 +14,8 @@ const { data: session } = useSession();
       className={styles.signInButton}
       >
         <FaGithub color="#04d361" />
-        Daniel Nascimento
-        <FiX color="#737380" className={styles.closeIcon} />
+        {session.user.name}
+        <FiX onClick={() => signOut()} color="#737380" className={styles.closeIcon} />
       </button>
   ) : (
       <button 

@@ -9,7 +9,7 @@ export function Header() {
       <div className={styles.headerContent}>
         <img src="/images/logo.svg" alt="reactron" />
         <nav>
-          <a className={styles.active} >Home</a>
+          <a className={styles.active}>Home</a>
           <a>Posts</a>
         </nav>
 
